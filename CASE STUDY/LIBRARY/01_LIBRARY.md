@@ -36,7 +36,7 @@ USE LIBRARY;
 
 ### 2. Creating Tables
 
-![show](show.png)
+![show](images/show.png)
 
 ```SQL
 CREATE TABLE BOOK (
@@ -51,7 +51,7 @@ CREATE TABLE BOOK (
 );
 ```
 
-![book](book.png)
+![book](images/book.png)
 
 ```SQL
 CREATE TABLE AUTHOR (
@@ -63,7 +63,7 @@ CREATE TABLE AUTHOR (
 );
 ```
 
-![author](author.png)
+![author](images/author.png)
 
 ```SQL
 CREATE TABLE BOOK_AUTHOR (
@@ -75,7 +75,7 @@ CREATE TABLE BOOK_AUTHOR (
 );
 ```
 
-![book_author](book_author3.png)
+![book_author](images/book_author3.png)
 
 ```SQL
 CREATE TABLE PUBLISHER (
@@ -85,7 +85,7 @@ CREATE TABLE PUBLISHER (
 );
 ```
 
-![publisher](publisher.png)
+![publisher](images/publisher.png)
 
 ```SQL
 CREATE TABLE MEMBER (
@@ -100,7 +100,7 @@ CREATE TABLE MEMBER (
 );
 ```
 
-![member](member.png)
+![member](images/member.png)
 
 ```SQL
 CREATE TABLE BOOK_ISSUE (
@@ -115,7 +115,7 @@ CREATE TABLE BOOK_ISSUE (
 );
 ```
 
-![book_issue](book_issue.png)
+![book_issue](images/book_issue.png)
 
 ```SQL
 CREATE TABLE BOOK_RETURN (
@@ -127,7 +127,7 @@ CREATE TABLE BOOK_RETURN (
 );
 ```
 
-![book_return](book_return.png)
+![book_return](images/book_return.png)
 
 ```SQL
 CREATE TABLE LANGUAGE (
@@ -136,7 +136,7 @@ CREATE TABLE LANGUAGE (
 );
 ```
 
-![language](language.png)
+![language](images/language.png)
 
 ```SQL
 CREATE TABLE LATE_FEE_RULE (
@@ -147,7 +147,7 @@ CREATE TABLE LATE_FEE_RULE (
 );
 ```
 
-![late_fee_rule](late_fee_rule.png)
+![late_fee_rule](images/late_fee_rule.png)
 
 
 ### 3. Adding Foreign Key After Creating the Table
@@ -221,7 +221,7 @@ ON UPDATE CASCADE;
 
 4. **If foreign key was declared while creating the table ( not case2)**
 
-![book_author](book_author.png)
+![book_author](images/book_author.png)
 
 ```SQL
 ALTER TABLE BOOK_AUTHOR
@@ -233,7 +233,7 @@ ALTER TABLE BOOK_AUTHOR
 DROP FOREIGN KEY BOOK_AUTHOR_ibfk_2;
 ```
 
-![book_author2](book_author2.png)
+![book_author2](images/book_author2.png)
 
 
 ### 6. Inserting Values
@@ -243,12 +243,12 @@ DROP FOREIGN KEY BOOK_AUTHOR_ibfk_2;
 INSERT INTO table_name (columns) VALUES (value)
 ```
 
-![insert](insert.png)
+![insert](images/insert.png)
 
 
 ### 7. Indexing
 - To confirm that the index is being used, you can use the `EXPLAIN` command before your query
 - This command provides information about how MySQL executes your query, including whether it uses indexes
 
-![index](index.png)
+![index](images/index.png)
 

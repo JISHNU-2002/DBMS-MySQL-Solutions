@@ -5,7 +5,7 @@
 ### 1. INSERT
 - Insert Values to the LANGUAGE Table
 
-![insert2](insert2.png)
+![insert2](images/insert2.png)
 
 ### 2. UPDATE
 - **Modify status from 'Active' to 'Inactive' on MEMBER where id=11**
@@ -14,7 +14,7 @@
 UPDATE MEMBER SET Status='Inactive' WHERE Member_id=11;
 ```
 
-![update](update.png)
+![update](images/update.png)
 
 - **Modify the MRP of all books published by 'Oxford University Press', provide 10% discount on MRP**
 
@@ -23,7 +23,7 @@ UPDATE BOOK, PUBLISHER SET BOOK.MRP = 0.1*BOOK.MRP
 WHERE BOOK.Publisher_id = PUBLISHER.Publisher_id AND PUBLISHER.Name LIKE 'Oxford%';
 ```
 
-![update2](update2.png)
+![update2](images/update2.png)
 
 - **Modify the Status from 'Issued' to 'Not Returned' on id 5 to 10 in BOOK_ISSUE**
 
@@ -31,7 +31,7 @@ WHERE BOOK.Publisher_id = PUBLISHER.Publisher_id AND PUBLISHER.Name LIKE 'Oxford
 UPDATE BOOK_ISSUE SET Status='Not Returned' WHERE Issue_id BETWEEN 5 AND 10;
 ```
 
-![update3](update3.png)
+![update3](images/update3.png)
 
 ### 3. Delete 
 - Delete existing records from a table
@@ -44,13 +44,13 @@ DELETE FROM table_name;
 DELETE FROM table_name WHERE condition;
 ```
 
-![delete](delete.png)
+![delete](images/delete.png)
 
 ### 4. SELECT
 
 - Find all books where title starts with 'T'
 
-![like](like.png)
+![like](images/like.png)
 
 
 - Find all books published between Jan 1st 1950 and Dec 31st 1960
@@ -61,7 +61,7 @@ FROM BOOK
 WHERE Published_date BETWEEN '1950-01-01' AND '1960-12-31'
 ```
 
-![select](select.png)
+![select](images/select.png)
 
 
 - Find all books published by 'Penguin Random House' having MRP less than 500
@@ -81,12 +81,12 @@ AND BOOK.MRP < 500
 AND PUBLISHER.Publisher_id = BOOK.Publisher_id;
 ```
 
-![select2](select2.png)
+![select2](images/select2.png)
 
 
 - Find publisher who are from 'New York, USA' and 'London, UK'
 
-![select3](select3.png)
+![select3](images/select3.png)
 
 
  - Get the no of books written by author named 'Fyodor Dostoevsky'
@@ -98,7 +98,7 @@ WHERE AUTHOR.Name = 'Fyodor Dostoevsky'
 AND AUTHOR.Author_id = BOOK_AUTHOR.Author_id;
 ```
 
-![select4](select4.png)
+![select4](images/select4.png)
 
 
 - Get the list of publishers and the no of books published by each publisher
@@ -110,7 +110,7 @@ WHERE PUBLISHER.Publisher_id = BOOK.Publisher_id
 GROUP BY PUBLISHER.Name;
 ```
 
-![select5](select5.png)
+![select5](images/select5.png)
 
 
 - Get the list of books that are not returned
@@ -120,7 +120,7 @@ SELECT BOOK.Title AS 'Books Issued but Not Returned' FROM BOOK, BOOK_ISSUE
 WHERE BOOK.Book_id = BOOK_ISSUE.Book_id AND BOOK_ISSUE.Status = 'Not Returned';
 ```
 
-![select6](select6.png)
+![select6](images/select6.png)
 
 - Get the list of the students who reads only 'English' books
 
@@ -133,7 +133,7 @@ AND B.Book_id = C.Book_id
 AND A.Member_id = C.Member_id;
 ```
 
-![select7](select7.png)
+![select7](images/select7.png)
 
 - Get the total fine collected on 'March' 
 
@@ -143,7 +143,7 @@ FROM BOOK_RETURN WHERE Actual_date_of_return > '2024-02-29'
 AND Actual_date_of_return < '2024-04-01';
 ```
 
-![select8](select8.png)
+![select8](images/select8.png)
 
 - Get the list of students who have overdue (not returned the book even after due date)
 
@@ -153,5 +153,5 @@ WHERE MEMBER.Member_id = BOOK_ISSUE.Member_id
 AND BOOK_ISSUE.Status = 'Not Returned';
 ```
 
-![select9](select9.png)
+![select9](images/select9.png)
 
