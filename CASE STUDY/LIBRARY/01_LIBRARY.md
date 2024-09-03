@@ -1,4 +1,4 @@
-# CASE STUDY - LIBRARY
+# CASE STUDY - LIBRARY 01
 
 # Problem Statement
 - A Library wants to maintain the record of books, members, book issue, book returns and fines collected for late returns in a database
@@ -22,7 +22,7 @@
 | LANGUAGE      | Language_id, Name                                                              | Language_id        |                          |
 | LATE_FEE_RULE | FromDays, ToDays, Amount                                                       | composite          | key                      |
 
-# SQL
+# SQL - DDL
 ### 1. Create and Use Database
 
 ```SQL
@@ -32,6 +32,7 @@ CREATE DATABASE LIBRARY;
 ```SQL
 USE LIBRARY;
 ```
+
 
 ### 2. Creating Tables
 
@@ -147,6 +148,8 @@ CREATE TABLE LATE_FEE_RULE (
 ```
 
 ![late_fee_rule](late_fee_rule.png)
+
+
 ### 3. Adding Foreign Key After Creating the Table
 ```SQL
 ALTER TABLE BOOK
@@ -158,12 +161,14 @@ ALTER TABLE BOOK
 ADD CONSTRAINT fk_publisher FOREIGN KEY (Publisher_id) REFERENCES PUBLISHER(Publisher_id);
 ```
 
+
 ### 4. Changing Data Type After Creating the Table
 ```SQL
 -- Change the data type of the Status column in the BOOK table
 ALTER TABLE BOOK
 MODIFY Status TINYINT(1);
 ```
+
 
 ### 5. To Add ON DELETE CASCADE & ON UPDATE CASCADE  After Creating the Table
 
@@ -230,8 +235,20 @@ DROP FOREIGN KEY BOOK_AUTHOR_ibfk_2;
 
 ![book_author2](book_author2.png)
 
-### 6. Indexing
+
+### 6. Inserting Values
+- `INSERT` is not a DDL it's DML
+
+```SQL
+INSERT INTO table_name (columns) VALUES (value)
+```
+
+![insert](insert.png)
+
+
+### 7. Indexing
 - To confirm that the index is being used, you can use the `EXPLAIN` command before your query
 - This command provides information about how MySQL executes your query, including whether it uses indexes
 
 ![index](index.png)
+
