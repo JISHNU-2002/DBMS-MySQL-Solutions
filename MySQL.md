@@ -133,3 +133,57 @@ To exit the MySQL shell, type:
 exit;
 ```
 
+# Database Initialization Using Bulk Import
+- Using MySQL command-line
+- **Bulk Import** in MySQL Workbench allows you to quickly load large amounts of data into a database table from a file, such as a CSV or SQL dump file
+
+```SQL
+SHOW VARIABLES LIKE "secure_file_priv"
+```
+
+![bulk](bulk_import.png)
+
+- Move the CSV file to `/var/lib.mysql-files/`
+
+```bash
+sudo cp table_name.csv /var/lib.mysql-files/
+```
+
+- Load data into table (table_name)
+
+```SQL
+LOAD DATA INFILE '/var/lib.mysql-files/table_name.csv' 
+INTO TABLE table_name 
+FIELDS TERMINATED BY ','
+ENCLOSED BY '"'
+LINES TERMINATED BY "\n"
+IGNORE 1 ROWS;
+```
+
+# Database Initialization Using Bulk Import
+- Using MySQL command-line
+- **Bulk Import** in MySQL Workbench allows you to quickly load large amounts of data into a database table from a file, such as a CSV or SQL dump file
+
+```SQL
+SHOW VARIABLES LIKE "secure_file_priv"
+```
+
+![bulk](images/bulk_import.png)
+
+- Move the CSV file to `/var/lib.mysql-files/`
+
+```bash
+sudo cp table_name.csv /var/lib.mysql-files/
+```
+
+- Load data into table (table_name)
+
+```SQL
+LOAD DATA INFILE '/var/lib.mysql-files/table_name.csv' 
+INTO TABLE table_name 
+FIELDS TERMINATED BY ','
+ENCLOSED BY '"'
+LINES TERMINATED BY "\n"
+IGNORE 1 ROWS;
+```
+
