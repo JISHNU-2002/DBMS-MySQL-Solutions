@@ -90,4 +90,4 @@ To get started with the solutions in this repository, you'll need to have MySQL 
 1. **Clone the Repository:**
 
    ```bash
-   git clone https://github.com/your-username/DBMS-MySQL-Solutions.git
+   git clone https://github.com/JISHNU-2002/DBMS-MySQL-Solutions.git
