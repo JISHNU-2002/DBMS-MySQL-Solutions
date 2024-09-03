@@ -31,6 +31,8 @@ USE OFFICE;
 
 ### 2. Creating Tables
 
+![tables](images/tables.png)
+
 ```SQL
 CREATE TABLE DEPARTMENT (
     Department_id INT PRIMARY KEY,
