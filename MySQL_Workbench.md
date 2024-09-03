@@ -10,7 +10,7 @@
 	- Follow the installation instructions for your operating system (Windows, macOS, Linux)
 
 - **Connecting to a MySQL Server**
-	- **Example Scenario:** Let's say you have MySQL installed locally and want to connect to it.
+	- **Example Scenario:** Let's say you have MySQL installed locally and want to connect to it
 	- **Open MySQL Workbench :** Launch MySQL Workbench from your applications
 	- **Connect to Database**
 		  - **Hostname:** `localhost`
