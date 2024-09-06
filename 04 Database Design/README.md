@@ -1,4 +1,4 @@
-# 4 Database Design
+# 4. Database Design
 - **Entity-Relationship (ER) Model**
 - **Designing ER Diagrams**
 - **Converting ER Diagrams to Tables**
