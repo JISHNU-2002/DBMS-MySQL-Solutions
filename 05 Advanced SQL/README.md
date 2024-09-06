@@ -15,3 +15,4 @@
 - **14 View**
 - **15 PL-SQL**
 - **16 PL-SQL - Trigger**
+- **17 PL-SQL - Cursor**
