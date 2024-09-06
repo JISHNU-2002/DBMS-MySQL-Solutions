@@ -1,4 +1,4 @@
-### 1. **Introduction to Databases**
+# 1. **Introduction to Databases**
    - **What is a Database?**
    - **DBMS vs. RDBMS**
    - **SQL vs. NoSQL**
