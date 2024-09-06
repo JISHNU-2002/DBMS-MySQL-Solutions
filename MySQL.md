@@ -160,3 +160,85 @@ LINES TERMINATED BY "\n"
 IGNORE 1 ROWS;
 ```
 
+
+# MySQL Backup
+
+**1. Using `mysqldump`**
+- The `mysqldump` utility is the most commonly used method to back up MySQL databases
+- It creates a text file with SQL statements to recreate the database schema and insert the data
+
+**Basic Syntax:**
+```bash
+mysqldump -u [username] -p [database_name] > [backup_file.sql]
+```
+
+**Example:**
+```bash
+mysqldump -u root -p DEMO > DEMO.sql
+```
+
+- The `backup_file.sql` (in this case, `DEMO.sql`) will be saved in the current working directory from which you run the `mysqldump` command
+- If you want to specify a different directory, you can provide a full path to the file:
+
+```sql
+mysqldump -u root -p demo > /path/to/your/backup/DEMO.sql
+```
+
+
+**2. Backing Up Multiple Databases**
+- To back up multiple databases, use the `--databases` option
+
+```bash
+mysqldump -u root -p --databases db1 db2 > multiple_databases_backup.sql
+```
+
+
+**3. Backing Up All Databases**
+- To back up all databases on the MySQL server, use the `--all-databases` option
+
+```bash
+mysqldump -u root -p --all-databases > all_databases_backup.sql
+```
+
+
+**4. Options for `mysqldump`**
+- `--single-transaction`: Ensures a consistent backup by using a single transaction
+- `--routines`: Includes stored routines and functions in the backup
+- `--triggers`: Includes triggers in the backup
+
+# MySQL Restore
+
+**1. Using `mysql`**
+- To restore a database from a backup file created by `mysqldump`, use the `mysql` command.
+
+**Basic Syntax:**
+```bash
+mysql -u [username] -p [database_name] < [backup_file.sql]
+```
+
+**Example:**
+```bash
+mysql -u root -p DEMO < DEMO.sql
+```
+
+
+**2. Restoring to a New Database:**
+- First create the database:
+```sql
+CREATE DATABASE new_database;
+```
+- Then restore it:
+```bash
+mysql -u root -p new_database < DEMO.sql
+```
+
+### Tips
+- **Compression:** For large databases, consider compressing the backup file to save disk space. For example, use gzip:
+  ```bash
+  mysqldump -u root -p demo | gzip > demo_backup.sql.gz
+  ```
+- To restore:
+  ```bash
+  gunzip < demo_backup.sql.gz | mysql -u root -p demo
+  ```
+
