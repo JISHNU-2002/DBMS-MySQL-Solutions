@@ -1,4 +1,4 @@
-# 07 Basic Concepts of DBMS  
+# 2 Basic Concepts of DBMS  
 - **Database Schema**
 - **Tables, Rows, and Columns**
 - **DBMS Keys**
