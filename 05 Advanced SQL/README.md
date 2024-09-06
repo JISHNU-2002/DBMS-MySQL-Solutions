@@ -1,4 +1,4 @@
-### 5. **Advanced SQL**
+# 5. **Advanced SQL**
    - **Views**
    - **Stored Procedures**
    - **Functions**
