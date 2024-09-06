@@ -1,4 +1,4 @@
-# 3 SQL Basics
+# 3. SQL Basics
 
 - **SQL Syntax**
 - **Data Types in MySQL**
