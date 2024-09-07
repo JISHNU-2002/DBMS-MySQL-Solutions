@@ -1,8 +1,8 @@
 # 1. **Introduction to Databases**
    - **What is a Database?**
-   - **DBMS vs. RDBMS**
-   - **SQL vs. NoSQL**
-   - **Popular Database Systems (MySQL, PostgreSQL, Oracle, etc.)**
+   - **DBMS v/s RDBMS**
+   - **SQL v/s NoSQL**
+   - **Popular Database Systems**
 
 # File Structure
 - **01 Introduction to SQL & Relational Databases**
