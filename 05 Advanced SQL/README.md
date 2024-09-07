@@ -16,3 +16,4 @@
 - **15 PL-SQL**
 - **16 PL-SQL - Trigger**
 - **17 PL-SQL - Cursor**
+- **18 Advanced SQL**
