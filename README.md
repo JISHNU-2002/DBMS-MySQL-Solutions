@@ -22,7 +22,7 @@ Welcome to the `DBMS-MySQL-Solutions` repository! This repository contains a col
    - **Basic SQL Operations:**
      - **SELECT, INSERT, UPDATE, DELETE**
    - **Filtering Data:**
-     - **WHERE, ORDER BY, DISTINCT**
+     - **WHERE, ORDER BY, GROUP BY, DISTINCT**
    - **Aggregate Functions:**
      - **COUNT, SUM, AVG, MIN, MAX**
    - **Joins:**
@@ -64,13 +64,12 @@ Welcome to the `DBMS-MySQL-Solutions` repository! This repository contains a col
 ### 8. **Practical Applications**
    - **Building a Simple CRUD Application**
    - **Connecting MySQL with Programming Languages (Python, Java, etc.)**
-   - **Using MySQL with Web Frameworks (Django, Flask, etc.)**
+   - **Using MySQL with Web Frameworks (Flask, etc.)**
    - **Project Work: Develop a small application with MySQL as the backend**
 
 ### 9. **Case Studies and Projects**
    - **Explore real-world database systems**
-   - **Analyze the database design of popular applications (e.g., e-commerce, social media)**
-   - **Work on a Capstone Project**
+   - **Analyze the database design of popular applications**
 
 ## Introduction
 
