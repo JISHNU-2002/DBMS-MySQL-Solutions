@@ -1,4 +1,4 @@
-# CRUD APPLICATION Using MySQL & Flask (Python Web-framework)
+# CRUD APPLICATION Using MySQL & Flask
 
 - Building a simple CRUD (Create, Read, Update, Delete) application with MySQL 
 ### Prerequisites
