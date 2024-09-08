@@ -1,7 +1,7 @@
 import pymysql
 
 # Establish the connection
-conn = pymysql.connect(
+connection = pymysql.connect(
     host="localhost",
     user="root",
     password="mysql",
@@ -9,11 +9,18 @@ conn = pymysql.connect(
 )
 
 # Create a cursor object
-cursor = conn.cursor()
+cursor = connection.cursor()
 
 # Insert data into the table
-cursor.execute("INSERT INTO employees (name, department, salary) VALUES (%s, %s, %s)", ('John Doe', 'HR', 55000))
-conn.commit()  # Commit the changes
+name = str(input('Enter employee name : '))
+department = str(input('Enter employee department : '))
+salary = float(input('Enter employee salary : '))
+
+# MySQL uses %s for all types of data, and PyMySQL handles the conversion internally
+cursor.execute("INSERT INTO employees (name, department, salary) VALUES (%s, %s, %s)", (name, department, salary))
+
+# Commit the changes
+connection.commit()  
 
 # Retrieve and print data from the table
 cursor.execute("SELECT * FROM employees")
@@ -23,4 +30,4 @@ for row in results:
 
 # Close the cursor and connection
 cursor.close()
-conn.close()
+connection.close()

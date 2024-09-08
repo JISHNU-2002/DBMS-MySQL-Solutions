@@ -11,9 +11,9 @@ conn = mysql.connector.connect(
 # Create a cursor object
 cursor = conn.cursor()
 
-# Insert data into the table
+# Insert data into the table and commit
 cursor.execute("INSERT INTO employees (name, department, salary) VALUES (%s, %s, %s)", ('John Doe', 'HR', 55000))
-conn.commit()  # Commit the changes
+conn.commit()  
 
 # Retrieve and print data from the table
 cursor.execute("SELECT * FROM employees")
